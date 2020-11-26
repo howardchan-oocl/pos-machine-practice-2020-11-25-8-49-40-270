@@ -15,7 +15,8 @@ public class PosMachine {
         int total = 0;
 
         for (PurchasedItem purchasedItem : purchasedItems) {
-            receipt += String.format("Name: %s, Quantity: %d, Unit price: %d (yuan), Subtotal: %d (yuan)\n", purchasedItem.getName(), purchasedItem.getAmount(), purchasedItem.getPrice(), purchasedItem.getSubTotal());
+            //todo put the substring in purchasedItem
+            receipt += purchasedItem.getSubString();
             total += purchasedItem.getSubTotal();
         }
 

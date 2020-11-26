@@ -1,6 +1,6 @@
 package pos.machine;
 
-public class PurchasedItem {
+public class PurchasedItem{
     private final String name;
     private final int price;
     private final int amount;
@@ -27,5 +27,9 @@ public class PurchasedItem {
 
     public int getSubTotal() {
         return subTotal;
+    }
+
+    public String getSubString() {
+        return String.format("Name: %s, Quantity: %d, Unit price: %d (yuan), Subtotal: %d (yuan)\n", name, amount, price, subTotal);
     }
 }
